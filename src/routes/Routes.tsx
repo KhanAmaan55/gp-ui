@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import ProtectedRoute from "./ProtectedRoute";
 
 import Home from "../pages/Home";
+import Login from "../pages/auth/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,14 @@ const router = createBrowserRouter(
           element={
             <PublicRoute>
               <Home />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="login"
+          element={
+            <PublicRoute>
+              <Login />
             </PublicRoute>
           }
         />
